@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.text-gradient {
+    background: linear-gradient(92deg, #88359D 1.12%, #2F6C8F 49.51%, #1EA56C 98.88%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-2 {
+    background: #D07FEC;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.carousel-container {
+    position: relative;
+    width: 350px;
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex;
+    width: 1050px; /* 3 items * 350px width */
+}
+
+.news-item {
+    min-width: 350px;
+    transition: transform 0.5s ease-in-out;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.sponsor-carousel {
+    animation: scroll 20s linear infinite;
+    display: flex;
+}
+
+.sponsor-carousel > div {
+    flex: 0 0 auto;
+}
+
+.navbar {
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s ease;
+}
